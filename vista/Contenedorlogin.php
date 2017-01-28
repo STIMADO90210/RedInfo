@@ -25,7 +25,7 @@
            ?>
                  <script>
                      alert('Bienvenido al sistema');
-                     window.location='?url=inicio';
+                     window.location='?url=Inicio';
                  </script>
          <?php
          }else{
@@ -62,7 +62,7 @@
                           ?>
                                 <script>
                                     alert('Infocentro no Tiene Administador Asignado');
-                                    window.location='?url=inicio';
+                                    window.location='?url=Inicio';
                                 </script>
                         <?php
                         }

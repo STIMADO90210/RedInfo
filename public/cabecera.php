@@ -1,3 +1,4 @@
+  <!DOCTYPE HTML>
   <head>
   <!-- Site made with Mobirise Website Builder v3.8.7, https://mobirise.com -->
   <meta charset="UTF-8">

@@ -10,6 +10,7 @@
                     <br>
                     <h3 class="text-center text-danger">USUARIOS</h3>
                     <a href="?url2=addusers&operacion=add" class="btn btn-primary col-lg-offset-1"> Nuevo Usuario</a>
+
                     <br>
                     <br>
 
@@ -20,7 +21,7 @@
                             <td>Cedula</td>
                             <td>Nombe</td>
                             <td>Cargo</td>
-                            <td colspan="2">Acciones</td>
+                            <td colspan="3">Acciones</td>
                         </tr>
                         <?php
                         $mostrar=5;
@@ -45,6 +46,7 @@
                               <td><?php echo strtoupper($r[$i]['nivel_user']) ?></td>
                             <td ><a href="?url2=addusers&operacion=edit&id=<?php echo $r[$i]['id_user'] ?>" class="btn btn-success">EDITAR  </a></td>
                             <td ><a href="?url2=addusers&operacion=delete&id=<?php echo $r[$i]['id_user'] ?>" class="btn btn-danger">ELIMINAR  </a></td>
+                             <td ><a href="?url2=addusers&operacion=asig&id=<?php echo $r[$i]['id_user'] ?>" class="btn btn-info">ASIGNAR INFOCENTRO</a></td>
                         </tr>
 
                                <?php  } ?>

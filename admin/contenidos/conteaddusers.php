@@ -103,41 +103,41 @@
                     <form name="form1" id="form1" method="POST" action="" class="form-group col-lg-offset-2">
                         <div class="form-group col-lg-4">
                             <label class="">Cedula</label>
-                            <input class="form-control fondoCeleste letraBlanca" name="cedula_user" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['cedula_user']; } ?> " >
+                            <input class="form-control fondoCeleste letraBlanca" name="cedula_user" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['cedula_user']; } ?> " >
                         </div>
 
                           <div class="clearfix"></div>
                          <div class="form-group ">
                              <label class="">Nombre</label>
-                            <input class="form-control fondoCeleste letraBlanca" name="nombre_user" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['nombre_user'];} ?> " >
+                            <input class="form-control fondoCeleste letraBlanca" name="nombre_user" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['nombre_user'];} ?> " >
                         </div>
 
                         <div class="form-group ">
                             <label class="">Apellido</label>
-                           <input class="form-control fondoCeleste letraBlanca" name="apellido_user" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['apellido_user'];} ?> " >
+                           <input class="form-control fondoCeleste letraBlanca" name="apellido_user" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['apellido_user'];} ?> " >
                        </div>
 
                           <div class="form-group ">
                             <label class="">Email</label>
-                           <input class="form-control fondoCeleste letraBlanca" name="email_user" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['email_user'];} ?> " >
+                           <input class="form-control fondoCeleste letraBlanca" name="email_user" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['email_user'];} ?> " >
                        </div>
 
                            <div class="form-group ">
                                 <label class="">Clave</label>
-                                <input class="form-control fondoCeleste letraBlanca" name="clave_user" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['clave_user'];} ?> " >
+                                <input class="form-control fondoCeleste letraBlanca" name="clave_user" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['clave_user'];} ?> " >
                            </div>
 
 
                             <div class="form-group col-lg-8">
 
-                                <input class="form-control fondoCeleste letraBlanca" id="filespri"  name="imagen" type="text" value="<?php if(($opera=='edit')or ($opera=='delete')){echo $r[0]['img_user'];} ?> " >
+                                <input class="form-control fondoCeleste letraBlanca" id="filespri"  name="imagen" type="text" value="<?php if(($opera=='edit')or ($opera=='delete')or ($opera=='asig')){echo $r[0]['img_user'];} ?> " >
 
                         </div>
                           <a onclick="javascript:subirimagen();"  class="btn btn-danger">BUSCAR FOTO</a>
 
                           
                           
-                                    //select para escojer infocentro
+                                    
                                 <div class="form-group ">
                                     <label class="">Escoja Infocentro a Administrar</label>
                                     <select class="form-control fondoCeleste letraBlanca" name="info">
@@ -166,7 +166,7 @@
                                             $r=$reg->leerCargo();
                                         ?>
 
-                                    // select para escojer cargo del ususario
+                                   
                           <div class="form-group">
                               <label class="">Escoja Cargo</label>
                               <select class="form-control fondoCeleste letraBlanca" name="nivel_user">

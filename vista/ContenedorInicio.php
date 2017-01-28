@@ -39,7 +39,7 @@
                     <br>
                     <h3 class="text-white text-lg-center">INFOCENTRO A LA VANGUARDIA TECNOLOGICA</h3>
                     <br>
-                    <img class="img-thumbnail" src="assets/images/infocentros.jpg">
+                    <img class="img-thumbnail" src="assets/images/HTML5.jpg">
                     <br>
                 </div>
                 

@@ -1,7 +1,6 @@
-
-<!DOCTYPE HTML>
-    <?php
+<?php
     include_once 'config.php';
+
     include_once 'public/cabecera.php';
     
         if(isset($_SESSION['logo_inf'])){ 
@@ -27,6 +26,7 @@
            <?php 
            include_once 'public/mainmenu.php';
            if(isset($_GET['url'])){
+            
                     $url=$_GET['url'];
            }else{
                $url='Inicio';

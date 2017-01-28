@@ -7,7 +7,7 @@ class Conectar
 			{                            								
 				// la conexion a la base de datos db_diario
 				
-				$conexion=  mysqli_connect('localhost', 'root', '', 'db_blog');
+				$conexion=  mysqli_connect('localhost', 'root', '1234', 'info_blog');
 				
 				return $conexion;
 				}

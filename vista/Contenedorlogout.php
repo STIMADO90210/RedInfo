@@ -14,6 +14,6 @@
 
                     <script>
                         alert('Session Cerrada Con Exito');
-                        window.location='?url=inicio';
+                        window.location='?url=Inicio';
                     </script>
 

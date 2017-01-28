@@ -1,7 +1,7 @@
 <section id="ext_menu-1 ">
 
     <nav class="navbar navbar-dropdown navbar-inverse navbar-fixed-top fondoGris">
-        <div class="container ">
+        <div class="container-fluid ">
 
             <div class="mbr-table">
                 <div class="mbr-table-cell">
@@ -29,11 +29,13 @@
                     </button>
 
                     <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
-                        <li class="nav-item"><a class="nav-link link text-white" href="?url=inicio">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link link text-white" href="?url=Inicio">INICIO</a></li>
                         <li class="nav-item"><a class="nav-link link text-white" href="?url=servicio">SERVICIOS</a></li>
+
                         <li class="nav-item"><a class="nav-link link text-white" href="?url=blog">BLOG</a></li>
                         <?php if(!isset($_SESSION['email_user'])){ ?>
                         <li class="nav-item dropdown">
+
                             <a class="nav-link link dropdown-toggle text-white" data-toggle="dropdown-submenu" href="">INFOCENTROS</a>
                             <div class="dropdown-menu fondoGris">
                                <?php
@@ -47,6 +49,14 @@
                         </li>
                         <?php } ?>
                          <?php if(isset($_SESSION['email_user'])){ ?>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link link dropdown-toggle text-white" data-toggle="dropdown-submenu" href="">VISITAS</a>
+                            <div class="dropdown-menu fondoGris">
+                                <a class="dropdown-item text-white" href="?url=Visitas">Visitas</a>
+                                <a class="dropdown-item text-white" href="?url=Reportes">Reportes</a>
+
+                            </div>
+                        </li>
                          <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle text-white" data-toggle="dropdown-submenu" href="">LOGOUT</a>
                             <div class="dropdown-menu fondoGris">
