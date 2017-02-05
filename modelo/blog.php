@@ -19,6 +19,17 @@ class Blog{
 					return $this->blog;
     } //fin de funcion  leerblog
 
+        public function leerblog2(){
+        $sql="SELECT * FROM blog_info ORDER BY id_art DESC";
+        $res=  mysqli_query(Conectar::con(), $sql);
+
+        while($reg= mysqli_fetch_assoc($res))
+        {
+          $this->blog[]=$reg;
+        }
+          return $this->blog;
+    } //fin de funcion  leerblog
+
 
     public function leerblogpag($ini,$most){
       $sql="SELECT * FROM blog_info LIMIT $ini,$most";

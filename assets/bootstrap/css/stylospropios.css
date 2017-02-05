@@ -5,33 +5,28 @@
  */
 
 
-.letraBlanca{
-    color:white;
-    
-}
 
-
-
-.fondoNegro{
-   background-color:#000;
-}
-.fondoVerde{
+.fondoCeleste{
     background:#009cde;
 }
+
+.fondoRosado{
+    background:#ce8483;
+}
 .fondoRojo{
-    background:#F00;
+    background:red;
+}
+.fondoVerde{
+    background:green;
 }
 
 .fondoGris{
-    background:#564740;
-}
-.fondoBlanco{
-    background:#FFF;
+    background:#687077;
 }
 
-.fondoAzul{
-    background:blue;
-}
-.fondoCeleste{
-    background:#009cde;
+
+
+.letraBlanca{
+    color:white;
+
 }

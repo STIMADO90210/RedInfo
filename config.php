@@ -11,7 +11,7 @@
 				
 
 
-                //require_once("modelo/visitas.php");
+                require_once("modelo/visitas.php");
                 require_once 'modelo/infocentros.php';
                 require_once("modelo/conectar.php");
                 require_once("modelo/blog.php");

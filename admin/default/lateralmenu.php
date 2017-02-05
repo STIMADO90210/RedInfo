@@ -7,6 +7,7 @@
                      <a href="?url2=users" class="btn btn-block btn-info">USUARIOS</a>
                 <?php } ?>
                 <a href="?url2=blogs" class="btn btn-block btn-danger">BLOGS</a>
+                <a href="?url2=visita" class="btn btn-block btn-info">VISITAS</a>
                 <a href="?url2=home" class="btn btn-block btn-default">REPORTES</a>
                 <a href="?url2=home" class="btn btn-block btn-success">SLIDER</a>
 

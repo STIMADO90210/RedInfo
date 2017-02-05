@@ -13,6 +13,8 @@
 
 
            $url2=$_GET['url2'];
+
+         
            include 'contenidos/conte'.$url2.'.php';
 
            ?>
