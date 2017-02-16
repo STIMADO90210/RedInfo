@@ -17,6 +17,8 @@
                                         }
                                                 return $this->Users;
             } // fin de funcion Users
+            
+            
 
 
             public function leerUsersId($id){
@@ -62,7 +64,14 @@
                   public function addusers($cedula, $nombre, $apellido,$email,$pass,$img, $id_inf, $cargo){
                     $sql="INSERT INTO usuarios (cedula_user,nombre_user,apellido_user,email_user,clave_user,img_user,id_inf, nivel_user) VALUES('$cedula', '$nombre', '$apellido','$img','$email','$pass', '$id_inf', '$cargo')";
                     $res=  mysqli_query(Conectar::con(), $sql);
-                    var_dump($res);
+                    
+                  } // fin de funcion addblog
+                  
+                  
+                   public function datusers($nro_user,$raza,$discap,$mision){
+                    $sql="INSERT INTO dat_user (id_user,id_raza,id_discap,id_mision) VALUES('$nro_user','$raza','$discap','$mision')";
+                    $res=  mysqli_query(Conectar::con(), $sql);
+                    
                   } // fin de funcion addblog
 
             public function leerUserspag($ini,$most){

@@ -52,8 +52,9 @@
                           <li class="nav-item dropdown">
                             <a class="nav-link link dropdown-toggle text-white" data-toggle="dropdown-submenu" href="">VISITAS</a>
                             <div class="dropdown-menu fondoGris">
-                                <a class="dropdown-item text-white" href="?url=Visitas">Visitas</a>
-                                <a class="dropdown-item text-white" href="?url=Reportes">Reportes</a>
+                                <a class="dropdown-item text-white" href="?url=NuevaVisitas">Registrar Nuevo Visitante</a>
+                                <a class="dropdown-item text-white" href="?url=cedvisita">Registrar Visita</a>
+                                <a class="dropdown-item text-white" href="?url=listarvisita">Reporte General</a>
 
                             </div>
                         </li>

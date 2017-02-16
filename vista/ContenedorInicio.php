@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <br>
-                    <br>
+                      <br>
 
 
                     <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
@@ -50,9 +50,9 @@
             <div class="clearflix"></div>
             <br>
 
-                  <div class="jumbotron">
-
-                      <h1 class="">Estadisticas</h1>
+                  <div class="fondoRojo">
+                            <br>
+                      <h1 class="text-lg-center text-white">Estadisticas De Todos Los Infocentros</h1>
                       <br>
 
                         <?php
@@ -61,36 +61,64 @@
                          ?>
 
 
-                      <div class="container">
-                    <div class="fondoGris col-lg-3">
+                <div class="container">
+                  <div class="col-lg-4 bg-inverse">
+                    <div class="thumbnail">
+                      
+                      <div class="caption">
+                          <br>
+                          <h2 class="text-lg-center">Total Visitas</h2>
                         <br>
-                        <h4 class="text-white text-lg-center">Total Visitantes</h4>
-                        <br>
-                        <h1 class="text-lg-center"> <?php echo $r[0]['COUNT(*)'] ?></h1>
-                       <br>
-                    </div>
-                    <div class="fondoRojo col-lg-3">
-                        <br>
-                       <h4 class="text-white text-lg-center">Nuevos Visitantes</h4>
-                       <br>
-                        <h1 class="text-lg-center">12</h1>
-                       <br>
-                    </div>
-                          <div class="fondoCeleste col-lg-3">
-                        <br>
-                       <h4 class="text-white text-lg-center">Etnias / Discap</h4>
-                       <br>
-                       <h1 class="text-lg-center"> 12   /  16</h1>
-                       <br>
-                    </div>
-                        <div class="fondoVerde col-lg-3">
-                        <br>
-                       <h4 class="text-white text-lg-center">visitas en misiones</h4>
-                       <br>
-                       <h1 class="text-lg-center"> 46</h1>
-                       <br>
-                    </div>
+                        <h1 class="text-lg-center text-white badge"><?=  $r[0]['COUNT(*)'] ?></h1>
+                                                <br>
+
+                                              
+
                       </div>
+                    </div>
+                  </div>
+                    
+                    
+                    <?php
+                                $reg=new Visitas();
+                                $r=$reg->leervisita2();
+                               //$r[$i]['fecha_inscrip']
+                                
+                                $nuevos=0;
+                                $regulares=0;
+                                for($i=0;$i<count($r);$i++){
+                                $cant=contdias($r[$i]['fecha_inscrip']);
+                                    if($cant<30){$nuevos++;}else{$regulares++;}
+                                }     
+                  ?>
+                    <div class="col-lg-4 bg-info">
+                    <div class="thumbnail">
+                      
+                      <div class="caption">
+                         <br>
+                          <h2 class="text-lg-center">Nuevas  Visitas</h2>
+                        <br>
+                        <h1 class="text-lg-center text-white badge"><?=  $nuevos ?></h1>
+                                                <br>
+
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-lg-4 bg-success">
+                    <div class="thumbnail">
+                      
+                      <div class="caption">
+                         <br>
+                          <h2 class="text-lg-center">Visitantes Regulares</h2>
+                        <br>
+                        <h1 class="text-lg-center text-white badge"><?=  $regulares ?></h1>
+                                                <br>
+
+                       </div>
+                    </div>
+                  </div>
+                    
+                </div>
 
                      <br> <br>
                   </div>
