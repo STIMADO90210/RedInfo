@@ -21,6 +21,7 @@
                 require_once("modelo/raza.php");
                 require_once("modelo/discap.php");
                 require_once("modelo/mision.php");
+                require_once("modelo/comentario.php");
                 require_once('funciones/funcion.php');
                 
 

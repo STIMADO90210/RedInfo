@@ -13,17 +13,7 @@
 
                 </div>
                 <div class="mbr-table-cell">
-                    <?php if(isset($_SESSION['email_user'])and isset($_SESSION['nivel_user'])==1){ ?>
-                    <div class="col-lg-4">
-                        <br>
-                        <br>
-                            <form class="form-group" name="cedula" method="post" action="" >
-                                <div class="form-group">
-                                    <input id="BusCed" class="form-control"  placeholder="Buscar Cedula" >
-                                </div>
-                            </form>
-                    </div>
-                     <?php  }     ?>
+                 
                     <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                         <div class="hamburger-icon"></div>
                     </button>
@@ -81,6 +71,20 @@
                         <?php } ?>
                     </ul>
                 </div>
+                   <?php if(isset($_SESSION['email_user'])and isset($_SESSION['nivel_user'])==1){ ?>
+                    
+                        <br>
+                      
+                      <form class="form-inline " name="cedula" method="post" action="" >
+                      
+                                <div class="form-group">
+                                    <input id="BusCed" name="BusCed" class="form-control"  placeholder="Buscar Cedula">
+                                    
+                                </div>
+                                <button type="submit" class="btn btn-success btn-group-sm">Buscar</button>
+                      </form>
+                   
+                     <?php  }     ?>
             </div>
         </div>
     </nav>
