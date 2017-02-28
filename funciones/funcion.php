@@ -8,6 +8,17 @@ function buscarmotivo($id){
     return $reg['MotVisita'];
 }
 
+function status($id){
+   $sql="SELECT * FROM reg_user WHERE id_user='$id'";
+     $res=  mysqli_query(Conectar::con(), $sql);
+       
+     $reg= mysqli_fetch_assoc($res);
+    return $reg['cont_vis'];
+}
+
+
+
+
 function contdias($fecha){
     
                      $fv=  explode('-', $fecha);

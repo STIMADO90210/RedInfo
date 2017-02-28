@@ -26,7 +26,7 @@
 
 
                        ?>
-                    <h3 class="text-white text-lg-center"><?php echo strtoupper($r[0]['titulo_art']) ?></h3>
+                    <h3 class="text-white text-lg-center text-uppercase"><?php echo $r[0]['titulo_art'] ?></h3>
                     <br>
                     <div class="container">
 
@@ -37,7 +37,7 @@
                              </div>
 
                               <div class="col-lg-12">
-                                  <h5 class="text-white text-justify"><?php echo $r[0]['cont_art'] ?></h5>
+                                  <h5 class="text-white text-justify text-center"><?php echo $r[0]['cont_art'] ?></h5>
                              </div>
 
 
@@ -96,6 +96,7 @@
                         <div class="container ">
                             <br>
                             <div class="container fondoGris">
+                                <blockquote>
                             <br>
                             
                             <em class="text-danger text-lg-center"><?php echo strtoupper($r[$j]['nick']); ?> </em>
@@ -106,8 +107,9 @@
                         ?> </mark>
                          <mark class="text-danger pull-lg-right"><?php echo $r[$j]['hora']; ?> </mark>
                          <br>
-                         <strong class="text-justify"><?php echo $r[$j]['comentario']; ?></strong>
+                         <span class="text-justify"><?php echo $r[$j]['comentario']; ?></span>
                          <br>
+                         </blockquote>
                          </div>
                          <br>
                          

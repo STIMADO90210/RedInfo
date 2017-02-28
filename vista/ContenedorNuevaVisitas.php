@@ -39,23 +39,24 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
 }
 //***********************************************************************************
 
-if(isset($_POST) and $_POST['nombre']==''){
+//if(isset($_POST) and $_POST['nombre']==''){
 ?>
-<script>
+<!--<script>
         alert('Ha Cometido un Error en uno de los campos del formulario Vuelva a LLenar Registros Correctamente');
        
-</script>
+</script>-->
 
 <?php    
-}
+//}
 
 ?>
 
 <section>
-        <div class="container fondoCeleste">
-            
-            <div class="clearflix"></div>
+        <div class="container-fluid fondoCeleste">
             <br>
+            <div class="container fondoGris">
+            <br>
+            
             <h1 class="text-lg-center text-white">Registrar Visitantes Nuevos</h1>
             <br>
                 <div class="">
@@ -87,7 +88,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                             </div>
 
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-4">
                                       <div class="form-group">
 
                                             <label class="form-control-label letra-blanca">Escriba Identificador de Email</label>
@@ -100,7 +101,8 @@ if(isset($_POST) and $_POST['nombre']==''){
 
 
                             </div>
-                             <div class="col-lg-6">
+                          
+                            <div class="col-lg-4">
                                       <div class="form-group">
 
                                             <label class="form-control-label letra-blanca" >Por Favor Escoja Un Servicio Email<span class="form-asterisk"></span></label>
@@ -113,31 +115,27 @@ if(isset($_POST) and $_POST['nombre']==''){
                                           <option>hotmail.com</option>
                                           <option>latinmail.com</option>
                                         </select>
-                                        </div>
-                                              
-
+                                        </div>                                              
                                       </div>
-
-
                             </div>
 
 
-
+                          
 
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <br>
+                                    
                                     <small class="form-control-label letra-blanca">Telefono</small >
                                     
                                     <input type="number" required="" class="form-control" name="telefono" id="telefono" value="<?php if(isset($_POST['telefono'])){echo $_POST['telefono']; } ?>">
                                 </div>
                             </div>
                             
-                            <div class="col-lg-6">
+                           <div class="col-lg-12">
                                 <small>Fecha De Nacimiento</small>
                                 <div class="form-group">
                                     
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                         <div class="form-group">
                                             <small class="form-control-label letra-blanca" >Dia</small>
                                     <select class="form-control" name="dia">                                        
@@ -147,7 +145,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                                     </select>
                                         </div>
                                     </div>   
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-6 ">
                                          <div class="form-group">
                                               <small class="form-control-label letra-blanca">Mes</small>
                                     <select class="form-control" name="mes">
@@ -157,7 +155,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                                     </select>
                                          </div>
                                    </div>   
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-3">
                                          <div class="form-group">
                                               <small class="form-control-label letra-blanca" for="">Año</small>
                                     <select class="form-control" name="ano">
@@ -172,9 +170,9 @@ if(isset($_POST) and $_POST['nombre']==''){
                                 </div>
                             </div>
 
-                            <div class="col-lg-2">
+                            <div class="col-lg-4">
                                 <div class="form-group">
-                                    <br>
+                                   
                                     <small  class="form-control-label letra-blanca">Sexo</small >
                                     <select class="form-control" name="sexo">
                                        
@@ -187,7 +185,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                             </div>
                             
                             
-                             <div class="col-lg-4">                                       
+                            <div class="col-lg-4">                                       
                                 <div class="form-group">
                                     <label class="form-control-label letra-blanca" >discapacidad</label>
                                     <?php
@@ -205,7 +203,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                             </div>
                             
                             
-                             <div class="col-lg-4">
+                            <div class="col-lg-4">
                                        
                                 <div class="form-group">
                                     <label class="form-control-label letra-blanca" >Comunidad Indigena</label>
@@ -224,7 +222,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                             </div>
                             
                             
-                              <div class="col-lg-4">
+                            <div class="col-lg-6">
                                        
                                 <div class="form-group">
                                     <label class="form-control-label letra-blanca" >Motivo de Visita</label>
@@ -242,7 +240,7 @@ if(isset($_POST) and $_POST['nombre']==''){
                             </div>
                             
                             
-                            <div class="col-lg-12">
+                            <div class="col-lg-6">
                                 <div class="form-group">
                                     <label class="form-control-label letra-blanca" >Misiones</label>
                                     <?php
@@ -259,8 +257,6 @@ if(isset($_POST) and $_POST['nombre']==''){
                                 
                             </div>
                             
-                           
-
                         </div>
 
                      
@@ -280,8 +276,10 @@ if(isset($_POST) and $_POST['nombre']==''){
                     </form>
                     </div>
 
-                <br>  <br>  <br>
+                <br>  <br> 
         </div>
+             <br>
+</div>
 
     </section>
 

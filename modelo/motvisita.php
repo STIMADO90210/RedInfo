@@ -24,7 +24,20 @@ class MotVisita{
     
     
     public function listamotivoid($id){
-        $sql="SELECT * FROM reg_visita WHERE id_user='$id' ORDER BY fec_vis DESC";
+        $sql="SELECT * FROM reg_visita WHERE id_user='$id' ORDER BY fec_vis ASC";
+        $res=  mysqli_query(Conectar::con(), $sql);
+       
+        while($reg= mysqli_fetch_assoc($res))
+				{
+           
+					$this->motivo[]=$reg;
+				}
+					return $this->motivo;
+    } //fin de funcion  leerblog
+    
+    
+    public function leermot(){
+        $sql="SELECT * FROM reg_visita";
         $res=  mysqli_query(Conectar::con(), $sql);
        
         while($reg= mysqli_fetch_assoc($res))

@@ -20,7 +20,7 @@
               } //fin de funcion  leerblog
               
                 public function leervisitaid($id){
-                  $sql="SELECT * FROM reg_user WHERE id_user='$id'";
+                  $sql="SELECT * FROM reg_user WHERE id_user='$id'" ;
                   $res=  mysqli_query(Conectar::con(), $sql);
 
                   while($reg= mysqli_fetch_assoc($res))
@@ -50,6 +50,19 @@
                   $idinfo=$_SESSION['id_inf'];
                   
                   $sql="SELECT * FROM reg_user WHERE id_info='$idinfo'  ORDER BY id_user DESC";
+                  $res=  mysqli_query(Conectar::con(), $sql);
+
+                  while($reg= mysqli_fetch_assoc($res))
+          				{
+          					$this->visita[]=$reg;
+          				}
+          					return $this->visita;
+              } //fin de funcion  leerblog
+              
+                  public function leervisitaestaditica(){
+                  $idinfo=$_SESSION['id_inf'];
+                  
+                  $sql="SELECT * FROM reg_user  ORDER BY id_user DESC";
                   $res=  mysqli_query(Conectar::con(), $sql);
 
                   while($reg= mysqli_fetch_assoc($res))
@@ -113,6 +126,12 @@
                  
                   
               } //fin de funcion  leerblogpag
+              
+     public function editvisitaid($cedula,$nombre,$telefono,$email, $fecha_nac,$sexo,$id){
+         $sql="UPDATE reg_user SET nombre_user='$nombre',cedula_user='$cedula',email_user='$email',telefono_user='$telefono',fecha_nac='$fecha_nac',sexo_user='$sexo'  WHERE id_user='$id'"; 
+         $res= mysqli_query(Conectar::con(), $sql);
+         
+     }         
 
 
    

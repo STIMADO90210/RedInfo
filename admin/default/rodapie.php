@@ -2,7 +2,7 @@
                  <br>
                  <br>
                  
-                 <a class="letraBlanca col-lg-offset-3">INFOCENTRO Y BLACKSOFT90210  | BY Creation 2017 |  TODOS LOS DERECHOS RESERVADOS</a>
+                 <a class="letraBlanca col-lg-offset-5">INFOCENTRO Y BLACKSOFT90210  | BY Creation 2017 |  TODOS LOS DERECHOS RESERVADOS</a>
                 
                 <br>
                  <br>

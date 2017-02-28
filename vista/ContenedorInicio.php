@@ -49,39 +49,58 @@
             </div>
             <div class="clearflix"></div>
             <br>
-
+                        
                   <div class="fondoRojo">
                             <br>
                       <h1 class="text-lg-center text-white">Estadisticas De Todos Los Infocentros</h1>
                       <br>
 
                         <?php
-                          $reg=new visitas();
-                          $r=$reg->contvisita();
+                          $reg=new MotVisita();
+                          $r=$reg->leermot();
+                          $totalvis=  count($r);
                          ?>
 
 
                 <div class="container">
-                  <div class="col-lg-4 bg-inverse">
-                    <div class="thumbnail">
+                    
+                       <div class="col-lg-3 bg-danger">
+                    <div class="container">
                       
-                      <div class="caption">
-                          <br>
-                          <h2 class="text-lg-center">Total Visitas</h2>
+                     
+                         <br>
+                          <h5 class="text-lg-center">Total Visitas</h5>
                         <br>
-                        <h1 class="text-lg-center text-white badge"><?=  $r[0]['COUNT(*)'] ?></h1>
+                        <h1 class="text-lg-center text-white badge"><?=  $totalvis ?></h1>
+                                                <br>
                                                 <br>
 
-                                              
+                    </div>
+                  </div>
+                    <?php
+                          $reg=new visitas();
+                          $r=$reg->leervisita();
+                          $total=  count($r);
+                      ?>
 
-                      </div>
+                  <div class="col-lg-3 bg-primary">
+                    <div class="container">
+                      
+                      
+                          <br>
+                          <h5 class="text-lg-center">Visitantes Registrados</h5>
+                        <br>
+                        <h1 class="text-lg-center text-white badge"><?=  $total ?></h1>
+                                                <br> 
+                                                <br>
+                     
                     </div>
                   </div>
                     
                     
                     <?php
                                 $reg=new Visitas();
-                                $r=$reg->leervisita2();
+                                $r=$reg->leervisitaestaditica();
                                //$r[$i]['fecha_inscrip']
                                 
                                 $nuevos=0;
@@ -91,44 +110,127 @@
                                     if($cant<30){$nuevos++;}else{$regulares++;}
                                 }     
                   ?>
-                    <div class="col-lg-4 bg-info">
-                    <div class="thumbnail">
+                    <div class="col-lg-3 bg-warning">
+                    <div class="container">
                       
-                      <div class="caption">
+                      
                          <br>
-                          <h2 class="text-lg-center">Nuevas  Visitas</h2>
+                          <h5 class="text-lg-center">Nuevas  Visitas</h5>
                         <br>
                         <h1 class="text-lg-center text-white badge"><?=  $nuevos ?></h1>
                                                 <br>
+                                                <br>
 
-                      </div>
+                     
                     </div>
                   </div>
-                    <div class="col-lg-4 bg-success">
-                    <div class="thumbnail">
+                 
+                    
+                    
+                    <div class="col-lg-3 fondoVerde">
+                    <div class="container">
                       
-                      <div class="caption">
+                     
                          <br>
-                          <h2 class="text-lg-center">Visitantes Regulares</h2>
+                          <h5 class="text-lg-center text-white">Visitantes Regulares</h5>
                         <br>
                         <h1 class="text-lg-center text-white badge"><?=  $regulares ?></h1>
                                                 <br>
+                                                <br>
 
-                       </div>
+                      
                     </div>
                   </div>
-                    
+                    <div class="clearflix"></div>
                 </div>
 
+                    
+                     <div class="container">
+                     <div class="jumbotron col">
+                         <div id="canvas-holder" class="" style="width:60%">
+                             <canvas id="chart-area" width="350" height="200" />
+                                </div>
+                                           
+                                            <script>
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [
+                    '<?=  $totalvis ?>',
+                    '<?=  $total ?>',
+                    '<?=  $nuevos ?>',
+                    '<?=  $regulares ?>',
+                    
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.blue,
+                    window.chartColors.yellow,
+                    window.chartColors.green,
+                    
+                ],
+                label: 'Infocentro'
+            }],
+            labels: [
+                "TOTAL VISITAS",
+                 "VISITAS REGISTRADAS",
+                  "VISITAS NUEVAR",
+                   "VISITAS REGULARES",
+                
+            ]
+        },
+        options: {
+            responsive: true,
+            title:"TOTAL ESTADISTICAS DE LOS INFOCENTROS",
+            visible:false
+        }
+    };
+
+    window.onload = function() {
+        var ctx = document.getElementById("chart-area").getContext("2d");
+        window.myPie = new Chart(ctx, config);
+    };
+
+ 
+
+    var colorNames = Object.keys(window.chartColors);
+    document.getElementById('addDataset').addEventListener('click', function() {
+        var newDataset = {
+            backgroundColor: [],
+            data: [],
+            label: 'New dataset ' + config.data.datasets.length,
+        };
+
+        for (var index = 0; index < config.data.labels.length; ++index) {
+            newDataset.data.push(randomScalingFactor());
+
+            var colorName = colorNames[index % colorNames.length];;
+            var newColor = window.chartColors[colorName];
+            newDataset.backgroundColor.push(newColor);
+        }
+
+        config.data.datasets.push(newDataset);
+        window.myPie.update();
+    });
+
+    document.getElementById('removeDataset').addEventListener('click', function() {
+        config.data.datasets.splice(0, 1);
+        window.myPie.update();
+    });
+    </script>
+                     </div>
+                         </div>
                      <br> <br>
+                     
                   </div>
 
                 <br>  <br>  <br>
-                <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
-                    <li role="presentation"><a href="#">Profile</a></li>
-                    <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
-              </ul>
+                
         </div>
 
     </section>

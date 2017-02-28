@@ -11,9 +11,9 @@
 				
                                     $mes=array('Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Obtubre','Noviembre','Diciembre');
                                     $dias=array('DOMINGO','LUNES','MARTES','MIERCOLES','JUEVES','VIERNES','SABADO');
+                require_once("modelo/conectar.php");                     
                 require_once("modelo/visitas.php");
-                require_once 'modelo/infocentros.php';
-                require_once("modelo/conectar.php");
+                require_once 'modelo/infocentros.php';               
                 require_once("modelo/blog.php");
                 require_once("modelo/users.php");
                 require_once("modelo/cargo.php");

@@ -2,11 +2,12 @@
     include_once 'config.php';
 
     include_once 'public/cabecera.php';
-    
+   
         if(isset($_SESSION['logo_inf'])){ 
             
             $img=$_SESSION['logo_inf'];
             $nomb=$_SESSION['nombre_inf'];
+            
         }else{
             
             $img="iconoinfo.png";
@@ -18,10 +19,11 @@
 
                 <script>
                      var img = "<?php echo  $img  ?>"; 
-                     var nomb = "<?php echo strtoupper($nomb)  ?>"; 
+                     var nomb = "<?php echo strtoupper($nomb)  ?>";
+                     
                 </script>
                 
-<body onload="cambiar(img,nomb)">
+<body onload="cambiar(<?php echo  $img  ?>,<?php echo strtoupper($nomb)  ?>)">
         
            <?php 
            include_once 'public/mainmenu.php';

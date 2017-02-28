@@ -2,7 +2,7 @@
     <section>
             <article>
 
-            <div class="col-lg-8 fondoCeleste pull-right">
+            <div class="col-lg-9 fondoCeleste pull-right col-lg-offset-2">
                 <br>
 
 
@@ -24,7 +24,7 @@
                             <td colspan="2">Acciones</td>
                         </tr>
                         <?php
-                        $mostrar=5;
+                        $mostrar=60;
                         $pag=0;
                         $inicio=0;
                         if(isset($_GET['pag'])){
@@ -50,8 +50,8 @@
                                  
                              </td>
 
-                            <td ><a href="?url2=addblogs&operacion=edit&id=<?php echo $r[$i]['id_art'] ?>" class="btn btn-success">EDITAR  </a></td>
-                            <td ><a href="?url2=addblogs&operacion=delete&id=<?php echo $r[$i]['id_art'] ?>" class="btn btn-danger">ELIMINAR  </a></td>
+                            <td ><a href="?url2=addvisita&operacion=edit&id=<?php echo $r[$i]['id_user'] ?>" class="btn btn-success">EDITAR  </a></td>
+                            <td ><a href="?url2=addvisita&operacion=delete&id=<?php echo $r[$i]['id_user'] ?>" class="btn btn-danger">ELIMINAR  </a></td>
                         </tr>
 
                                <?php  } ?>

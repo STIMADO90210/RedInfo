@@ -5,7 +5,9 @@
  */
 
 
-
+.fondoAmarillo{
+    background:#F1C050;
+}
 .fondoCeleste{
     background:#009cde;
 }
@@ -29,7 +31,7 @@
 }
 
 .fondoGris{
-    background:#687077;
+    background:darkgrey;
 }
 
 

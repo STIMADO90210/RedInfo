@@ -59,7 +59,7 @@
     <section>
             <article>
 
-            <div class="col-lg-8 fondoCeleste pull-right">
+            <div class="col-lg-9 fondoCeleste pull-right col-lg-offset-2">
                 <br>
 
 

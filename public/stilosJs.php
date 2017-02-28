@@ -8,6 +8,7 @@
   <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
   <script src="assets/jquery-mb-ytplayer/jquery.mb.YTPlayer.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
   
   
   <input name="animation" type="hidden">

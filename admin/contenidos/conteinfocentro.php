@@ -2,7 +2,7 @@
     <section>
             <article>
 
-            <div class="col-lg-8 fondoCeleste pull-right">
+            <div class="col-lg-9 fondoCeleste pull-right col-lg-offset-2">
                 <br>
 
 
@@ -22,7 +22,7 @@
                             <td colspan="2">Acciones</td>
                         </tr>
                         <?php
-                        $mostrar=5;
+                        $mostrar=15;
                         $pag=0;
                         $inicio=0;
                         if(isset($_GET['pag'])){

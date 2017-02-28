@@ -20,8 +20,8 @@
                     <br>
                     <table class="table table-warning">
                         <tr class="text-lg-center table-inverse">
-                            <td>Fecha</td>                            
                             <td>Dia</td>
+                            <td>Fecha</td>                                                        
                             <td>Motivo De Visita</td>
                             
                         </tr>
@@ -31,22 +31,22 @@
                                 $r=$reg->listamotivoid($iduser);
                                
                                 for($i=0;$i<count($r);$i++){
-                                    $fecha= implode("-", array_reverse(explode("-", $r[$i]['fec_vis']))); 
-                                    //$f=explode('-', $r[$i]['fec_vis']);
-                                    //$fecha=$f[2].'-'.$f[1].'-'.$f[0];                                                                     
+                                    $fecha= implode("-", array_reverse(explode("-", $r[$i]['fec_vis'])));                                                                                                         
                                     $fec=strtotime($r[$i]['fec_vis']);
                                     $nrodia=date('w', $fec);
-                                    
-                        ?>
-                         <tr class="text-lg-center table-success">
-                             <td><?php echo $fecha; ?></td>
-                            <td><?php echo $dias[$nrodia]; ?></td>
-                            <td><?php echo strtoupper(buscarmotivo($r[$i]['id_mot'])); ?></td>
-                            
-                        </tr>
-                        <?php
-                        }
-                        ?>
+                                                     
+                                          ?>
+                                           <tr class="text-lg-center table-success">
+
+                                                <td><?php echo $dias[$nrodia]; ?></td>
+                                               <td><?php echo $fecha; ?></td>                           
+                                              <td><?php echo strtoupper(buscarmotivo($r[$i]['id_mot'])); ?></td>
+
+                                          </tr>
+                                 <?php
+                                           
+                                }
+                                ?>
                     </table>
                      
                     <br><br>

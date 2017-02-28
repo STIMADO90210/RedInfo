@@ -7,8 +7,8 @@
                 <div class="mbr-table-cell">
 
                     <div class="navbar-brand">
-                        <a href="index.php" class="navbar-logo"><img id="logo" src="assets/images/iconoinfo.png" alt="Infocentro"></a>
-                        <a class="navbar-caption text-white" id="nombre" href="">INFOCENTRO</a>
+                        <a href="index.php" class="navbar-logo"><img id="logo" src="assets/images/<?php echo  $img  ?>" alt="Infocentro"></a>
+                        <a class="navbar-caption text-white" id="nombre" href=""><?php echo strtoupper($nomb)  ?></a>
                     </div>
 
                 </div>
@@ -75,7 +75,7 @@
                     
                         <br>
                       
-                      <form class="form-inline " name="cedula" method="post" action="" >
+                      <form class="form-inline " name="cedula" method="post" action="?url=listarvisita" >
                       
                                 <div class="form-group">
                                     <input id="BusCed" name="BusCed" class="form-control"  placeholder="Buscar Cedula">
