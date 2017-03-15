@@ -57,18 +57,15 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
             <div class="container fondoGris">
             <br>
             
-            <h1 class="text-lg-center text-white">Registrar Visitantes Nuevos</h1>
+            <h1 class="text-center letraBlanca">Registrar Visitantes Nuevos</h1>
             <br>
                 <div class="">
-                    <form action="" method="post" class="form-group" name="form1" onsubmit="retirn validaDatos()" >                      
+                    <form action="" method="post" class="form-group" name="form1"  >                      
                           
-                        <div class="">
-
-                      
-
+                        <div class="">                     
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label class="form-control-label letra-blanca" >Cedula<span class="form-asterisk">*</span></label>
+                                    <label class="form-control-label letraBlanca" >Cedula<span class="form-asterisk">*</span></label>
                                     <?php if(isset($_GET['ced'])){ ?>
                                     <input type="text" class="form-control" name="cedula"  value="<?php echo $_GET['ced']; ?>" id="cedula">
                                     <?php }else { ?>
@@ -80,7 +77,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                               <div class="col-lg-8">
                                 <div class="form-group">
                                    
-                                    <label class="form-control-label letra-blanca" for="form1-0-name">Nombre y Apellido<span class="form-asterisk">*</span></label>
+                                    <label class="form-control-label letraBlanca" for="form1-0-name">Nombre y Apellido<span class="form-asterisk">*</span></label>
                                     <br>
                                     
                                     <input type="text" required="" class="form-control" name="nombre"  id="nombre" value="<?php if(isset($_POST['nombre'])){echo $_POST['nombre']; } ?>">
@@ -91,7 +88,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-4">
                                       <div class="form-group">
 
-                                            <label class="form-control-label letra-blanca">Escriba Identificador de Email</label>
+                                            <label class="form-control-label letraBlanca">Escriba Identificador de Email</label>
                                               <br>  
 
                                               <input type="text" required="" class="form-control" name="nombreemail" id="nombreemail" value="<?php if(isset($_POST['nombreemail'])){echo $_POST['nombreemail']; } ?>">
@@ -105,7 +102,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-4">
                                       <div class="form-group">
 
-                                            <label class="form-control-label letra-blanca" >Por Favor Escoja Un Servicio Email<span class="form-asterisk"></span></label>
+                                            <label class="form-control-label letraBlanca" >Por Favor Escoja Un Servicio Email<span class="form-asterisk"></span></label>
                                               <br>   
                                               <div class="input-group">
                                               <span class="input-group-addon">@</span>                                   
@@ -125,19 +122,19 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-4">
                                 <div class="form-group">
                                     
-                                    <small class="form-control-label letra-blanca">Telefono</small >
+                                    <small class="form-control-label letraBlanca">Telefono</small >
                                     
                                     <input type="number" required="" class="form-control" name="telefono" id="telefono" value="<?php if(isset($_POST['telefono'])){echo $_POST['telefono']; } ?>">
                                 </div>
                             </div>
                             
                            <div class="col-lg-12">
-                                <small>Fecha De Nacimiento</small>
+                               <small class="letraBlanca">Fecha De Nacimiento</small>
                                 <div class="form-group">
                                     
                                     <div class="col-lg-3">
                                         <div class="form-group">
-                                            <small class="form-control-label letra-blanca" >Dia</small>
+                                            <small class="form-control-label letraBlanca" >Dia</small>
                                     <select class="form-control" name="dia">                                        
                                         <?php for($d=1;$d<32;$d++){ ?>
                                         <option class="text-lg-left" value="<?php echo $d ?>"><?php echo $d ?></option>
@@ -147,7 +144,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                                     </div>   
                                     <div class="col-lg-6 ">
                                          <div class="form-group">
-                                              <small class="form-control-label letra-blanca">Mes</small>
+                                              <small class="form-control-label letraBlanca">Mes</small>
                                     <select class="form-control" name="mes">
                                         <?php for($m=0;$m<12;$m++){ ?>
                                         <option class="text-lg-left" value="<?php echo $m ?>"><?php echo $mes[$m] ?></option>
@@ -157,7 +154,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                                    </div>   
                                     <div class="col-lg-3">
                                          <div class="form-group">
-                                              <small class="form-control-label letra-blanca" for="">Año</small>
+                                              <small class="form-control-label letraBlanca" for="">Año</small>
                                     <select class="form-control" name="ano">
                                         <?php for($a=date('Y');$a>1900;$a--){ ?>
                                         <option class="text-lg-left" value="<?php echo $a ?>"><?php echo $a ?></option>
@@ -173,11 +170,11 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-4">
                                 <div class="form-group">
                                    
-                                    <small  class="form-control-label letra-blanca">Sexo</small >
+                                    <small  class="form-control-label letraBlanca">Sexo</small >
                                     <select class="form-control" name="sexo">
                                        
-                                        <option class="text-lg-left" value="m">Masculino</option>
-                                        <option class="text-lg-left" value="f">Femenino</option>
+                                        <option class="text-left" value="m">Masculino</option>
+                                        <option class="text-left" value="f">Femenino</option>
                                         
                                     </select>
                                     
@@ -187,7 +184,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             
                             <div class="col-lg-4">                                       
                                 <div class="form-group">
-                                    <label class="form-control-label letra-blanca" >discapacidad</label>
+                                    <label class="form-control-label letraBlanca" >discapacidad</label>
                                     <?php
                                         
                                         $reg=new Discap();                                                  
@@ -206,7 +203,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-4">
                                        
                                 <div class="form-group">
-                                    <label class="form-control-label letra-blanca" >Comunidad Indigena</label>
+                                    <label class="form-control-label letraBlanca" >Comunidad Indigena</label>
                                     <?php
                                        
                                          $reg=new Raza();                                                   
@@ -225,7 +222,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             <div class="col-lg-6">
                                        
                                 <div class="form-group">
-                                    <label class="form-control-label letra-blanca" >Motivo de Visita</label>
+                                    <label class="form-control-label letraBlanca" >Motivo de Visita</label>
                                     <?php
                                         
                                         $reg=new MotVisita();
@@ -242,7 +239,7 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
                             
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label class="form-control-label letra-blanca" >Misiones</label>
+                                    <label class="form-control-label letraBlanca" >Misiones</label>
                                     <?php
                                         
                                         $reg=new Mision();

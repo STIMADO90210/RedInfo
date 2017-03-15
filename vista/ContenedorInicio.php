@@ -1,6 +1,6 @@
   <section>
-        <div class="container fondoCeleste">
-            <div class="row">
+        <div class="container" >
+            <div class="row"  style='background-image:url(bootstrap/images/fondo-azul-claro.jpg)'>
                 <div class="col-lg-8">
                     <br>
                       <br>
@@ -29,7 +29,8 @@
 	<script type="text/javascript" src="engine1/wowslider.js"></script>
 	<script type="text/javascript" src="engine1/script.js"></script>
 	<!-- End WOWSlider.com BODY section -->
-                    <br>
+
+        <br>
                     <br>
                 </div>
                 <?php
@@ -40,19 +41,19 @@
                 <div  class="col-lg-4">
                     <br>
                     <br>
-                    <h4 href="?url=blogdet&id=<?php echo $r[$j]['id_art'] ?>" class="text-white text-lg-center"><?= $r[0]['titulo_art'] ?></h4>
+                    <h4 href="?url=blogdet&id=<?php echo $r[$j]['id_art'] ?>" class=""><strong class="text-white"><?= $r[0]['titulo_art'] ?></strong></h4>
                     <br>
-                    <img class="img-thumbnail" src="assets/images/<?= $r[0]['img_art'] ?>">
+                    <img class="img-thumbnail" src="bootstrap/images/<?= $r[0]['img_art'] ?>">
                     <br>
                 </div>
 
             </div>
             <div class="clearflix"></div>
             <br>
-                        
-                  <div class="fondoRojo">
+
+                  <div class="col-lg-12 fondoBlanco"  >
                             <br>
-                      <h1 class="text-lg-center text-white">Estadisticas De Todos Los Infocentros</h1>
+                      <h3 class="text-center text-uppercase">Estadisticas De Todos Los Infocentros</h3>
                       <br>
 
                         <?php
@@ -62,96 +63,70 @@
                          ?>
 
 
-                <div class="container">
-                    
-                       <div class="col-lg-3 bg-danger">
-                    <div class="container">
-                      
-                     
-                         <br>
-                          <h5 class="text-lg-center">Total Visitas</h5>
-                        <br>
-                        <h1 class="text-lg-center text-white badge"><?=  $totalvis ?></h1>
-                                                <br>
-                                                <br>
+                <div class="container-fluid">
 
-                    </div>
-                  </div>
+                       <div class="col-lg-3    ">
+                                <div class="container-fluid ">
+                                    <br>
+                                    <button class="btn btn-danger btn-block letraBlanca">Total Visitas   <span class="badge"><?=  $totalvis ?></span></button>
+                                    <br>
+                                </div>
+                        </div>
                     <?php
                           $reg=new visitas();
                           $r=$reg->leervisita();
                           $total=  count($r);
                       ?>
 
-                  <div class="col-lg-3 bg-primary">
-                    <div class="container">
-                      
-                      
-                          <br>
-                          <h5 class="text-lg-center">Visitantes Registrados</h5>
+                  <div class="col-lg-3">
+                    <div class="container-fluid">
                         <br>
-                        <h1 class="text-lg-center text-white badge"><?=  $total ?></h1>
-                                                <br> 
-                                                <br>
-                     
+                          <button class="letraBlanca btn btn-success btn-block">Registrados  <span class="badge"><?=  $total ?></span></button>
+                          <br>
                     </div>
                   </div>
-                    
-                    
+
+
                     <?php
                                 $reg=new Visitas();
                                 $r=$reg->leervisitaestaditica();
                                //$r[$i]['fecha_inscrip']
-                                
+
                                 $nuevos=0;
                                 $regulares=0;
                                 for($i=0;$i<count($r);$i++){
                                 $cant=contdias($r[$i]['fecha_inscrip']);
                                     if($cant<30){$nuevos++;}else{$regulares++;}
-                                }     
+                                }
                   ?>
-                    <div class="col-lg-3 bg-warning">
-                    <div class="container">
-                      
-                      
-                         <br>
-                          <h5 class="text-lg-center">Nuevas  Visitas</h5>
+                    <div class="col-lg-3">
+                    <div class="container-fluid">
                         <br>
-                        <h1 class="text-lg-center text-white badge"><?=  $nuevos ?></h1>
-                                                <br>
-                                                <br>
-
-                     
+                        <button class="btn btn-primary btn-block letraBlanca">Nuevas  Visitas  <span class="badge"><?=  $nuevos ?></span></button>
+                        <br>
                     </div>
                   </div>
-                 
-                    
-                    
-                    <div class="col-lg-3 fondoVerde">
-                    <div class="container">
-                      
-                     
-                         <br>
-                          <h5 class="text-lg-center text-white">Visitantes Regulares</h5>
-                        <br>
-                        <h1 class="text-lg-center text-white badge"><?=  $regulares ?></h1>
-                                                <br>
-                                                <br>
 
-                      
+
+
+                    <div class="col-lg-3">
+                    <div class="container-fluid">
+                        <br>
+                        <button class="btn btn-warning btn-block letraBlanca">Regulares   <span class="badge"><?=  $regulares ?></span></button>
+                        <br>
                     </div>
                   </div>
                     <div class="clearflix"></div>
                 </div>
 
-                    
-                     <div class="container">
-                     <div class="jumbotron col">
-                         <div id="canvas-holder" class="" style="width:60%">
+
+                     <div class="container-fluid">
+                     <div class="" >
+                         <div id="canvas-holder" class="col-lg-offset-2" style="width:70%">
                              <canvas id="chart-area" width="350" height="200" />
-                                </div>
-                                           
-                                            <script>
+                     </div>
+
+  <script>
     var randomScalingFactor = function() {
         return Math.round(Math.random() * 100);
     };
@@ -165,23 +140,23 @@
                     '<?=  $total ?>',
                     '<?=  $nuevos ?>',
                     '<?=  $regulares ?>',
-                    
+
                 ],
                 backgroundColor: [
                     window.chartColors.red,
-                    window.chartColors.blue,
-                    window.chartColors.yellow,
                     window.chartColors.green,
-                    
+                    window.chartColors.blue,
+                    window.chartColors.orange,
+
                 ],
                 label: 'Infocentro'
             }],
             labels: [
                 "TOTAL VISITAS",
                  "VISITAS REGISTRADAS",
-                  "VISITAS NUEVAR",
+                  "VISITAS NUEVAS",
                    "VISITAS REGULARES",
-                
+
             ]
         },
         options: {
@@ -196,7 +171,7 @@
         window.myPie = new Chart(ctx, config);
     };
 
- 
+
 
     var colorNames = Object.keys(window.chartColors);
     document.getElementById('addDataset').addEventListener('click', function() {
@@ -224,13 +199,13 @@
     });
     </script>
                      </div>
-                         </div>
+               </div>
                      <br> <br>
-                     
+
                   </div>
 
                 <br>  <br>  <br>
-                
+
         </div>
 
     </section>

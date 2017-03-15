@@ -42,19 +42,21 @@
     }
 ?>
 
-<section>
-
-        <div class="container fondoCeleste">
-            <?php
+        <section>
+            <br>
+                 <br>
+                
+            <div class="container">
+                <div class="fondoCeleste">
+                    <div class="container">
+                        <?php
                     $reg=new Infocentro();
                     $r=$reg->leerInfo_id($_GET['id'])
              ?>
-            <div class="row">
-                <div class="col-lg-12">
-                    <br>
-                    <br>
+           
+             
 
-                    <h1 class="text-lg-center text-white">Infocentro <?php echo strtoupper($r[0]['nombre_inf']) ?></h1>
+                    <h1 class="text-center letraBlanca">Infocentro <?php echo strtoupper($r[0]['nombre_inf']) ?></h1>
                     <?php
                         $adm=new Users();
                         $a=$adm->buscarinfo($_GET['id']);
@@ -67,35 +69,33 @@
                         <?php
                         }
                     ?>
-                    <h3 class="text-lg-center text-danger">Administrador : <?php echo strtoupper($a[0]['nombre_user'].'  '. $a[0]['apellido_user']) ?></h3>
-                    <div class="container ">
-                        <div class="col-lg-8 col-lg-offset-2">
-                        <form class="form-control fondoGris" method="post" action="" name="login" id="login">
-                            <br>
-                            <br>
-                            <div class="form-group">
-                                <input type="email" name="email" class="form-control"  placeholder="Email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" name="pass" class="form-control"  placeholder="Password">
-                            </div>
-                            <input type="submit" class="btn btn-info col-lg-offset-1" name="Enviar" value="Iniciar Session">
-                            <input type="hidden" name="idinf" value="<?php echo $_GET['id'] ?>">
-                         </form>
-                        </div>
-
-                    <br><br>
-                    <br><br>
-
+                    <h3 class="letraBlanca">Administrador : <?php echo strtoupper($a[0]['nombre_user'].'  '. $a[0]['apellido_user']) ?></h3>
+                            <div class="col-lg-6 col-lg-offset-2 fondoNegro ">
+                                <br>
+                                    <form class="" method="post" action="" name="login" id="login">
+                                        <br>
+                                        <br>
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control"  placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="pass" class="form-control"  placeholder="Password">
+                                        </div>
+                                        <input type="submit" class="btn btn-primary col-lg-offset-1" name="Enviar" value="Iniciar Session">
+                                        <input type="hidden" name="idinf" value="<?php echo $_GET['id'] ?>">
+                                     </form>
+                                <br><br>
+                             </div>
                     </div>
                     <br>
-                    <br>
+                 <br>
+                 <br>
+                 <br>
                 </div>
-
-
-
+                
             </div>
-
-        </div>
-
-    </section>
+         </section>
+                 <br>
+                 <br>
+                 <br>
+                 <br>

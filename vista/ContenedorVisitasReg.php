@@ -1,12 +1,12 @@
   <section>
-        <div class="container fondoCeleste">
+        <div class="container-fluid" style='background-image:url(bootstrap/images/fondo-azul-claro.jpg)'>
            
               
                     <br>
                     <br>
                      
-                    <h1 class="text-lg-center text-white">Visitantas Registradas</h1>
-                    <div class="container">
+                    <h1 class="text-center letraBlanca">Visitantas Registradas</h1>
+                    <div class="container" style='background-image:url(bootstrap/images/orig_83355.jpg)'>
                         
                       <?php if(isset($_GET['idvis'])){
                             $iduser=$_GET['idvis'];
@@ -15,14 +15,14 @@
                       }                                                    
                           ?>  
                     <br>
-                    <h2 class="text-white">Visitante : <?php echo strtoupper($r[0]['nombre_user']); ?></h2>
-                    <h2 class="text-white">Cedula    : <?php echo strtoupper($r[0]['cedula_user']); ?></h2>
+                    <h2 class="letraBlanca">Visitante : <?php echo strtoupper($r[0]['nombre_user']); ?></h2>
+                    <h2 class="letraBlanca">Cedula    : <?php echo strtoupper($r[0]['cedula_user']); ?></h2>
                     <br>
-                    <table class="table table-warning">
-                        <tr class="text-lg-center table-inverse">
-                            <td>Dia</td>
-                            <td>Fecha</td>                                                        
-                            <td>Motivo De Visita</td>
+                    <table class="table table-bordered">
+                        <tr class="table-success text-uppercase ">
+                            <th class="text-center bg-primary ">Dia</th>
+                            <th class="text-center bg-primary">Fecha</th>                                                        
+                            <th class="text-center bg-primary">Motivo De Visita</th>
                             
                         </tr>
                         <?php
@@ -31,12 +31,13 @@
                                 $r=$reg->listamotivoid($iduser);
                                
                                 for($i=0;$i<count($r);$i++){
+                            
                                     $fecha= implode("-", array_reverse(explode("-", $r[$i]['fec_vis'])));                                                                                                         
                                     $fec=strtotime($r[$i]['fec_vis']);
                                     $nrodia=date('w', $fec);
                                                      
                                           ?>
-                                           <tr class="text-lg-center table-success">
+                                           <tr class="text-center letraBlanca text-uppercase">
 
                                                 <td><?php echo $dias[$nrodia]; ?></td>
                                                <td><?php echo $fecha; ?></td>                           

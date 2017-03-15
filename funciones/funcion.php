@@ -8,6 +8,31 @@ function buscarmotivo($id){
     return $reg['MotVisita'];
 }
 
+function cont_visitas($id){
+    
+    $sql="SELECT * FROM reg_user WHERE id_info='$id'";
+     $res=  mysqli_query(Conectar::con(), $sql);
+     
+                $contador=0;
+                 while($reg= mysqli_fetch_assoc($res))
+                  {
+                     $cont_id=0;
+                     $iduser= $reg['id_user'];
+                   $sql="SELECT * FROM reg_visita WHERE id_user='$iduser'";
+                    $res2=  mysqli_query(Conectar::con(), $sql);
+                    
+                   
+                                    
+                  
+                    
+                  }
+                    
+                  
+                  return $this->visita;
+    
+}
+
+
 function status($id){
    $sql="SELECT * FROM reg_user WHERE id_user='$id'";
      $res=  mysqli_query(Conectar::con(), $sql);

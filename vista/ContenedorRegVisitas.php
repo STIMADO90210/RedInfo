@@ -39,7 +39,7 @@ if(isset($_GET['ced'])){
             
             <div class="clearflix"></div>
             <br>
-            <h1 class="text-lg-center text-white">Registrar Visitantes Nuevos</h1>
+            <h1 class="text-center letraBlanca">Registrar Visitantes Nuevos</h1>
             <br>
                 <div class="">
                     <form action="" method="post" class="form-group" name="form1" onsubmit="retirn validaDatos()" >                      

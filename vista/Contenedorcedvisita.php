@@ -41,7 +41,7 @@ if(count($r)==0){
                                 <div class="form-group">
                                                                        
                                     <div class="col-lg-6">
-                                      <label class="form-control-label letra-blanca" >Ingrese Cedula a Buscar</label>   
+                                      <label class="form-control-label letraBlanca" >Ingrese Cedula a Buscar</label>   
                                     <input type="text" required="" class="form-control" name="ced"   id="ced" value="<?php ?>">
                                     </div>
                                     <br>

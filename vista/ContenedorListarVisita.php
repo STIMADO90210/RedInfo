@@ -1,26 +1,25 @@
   <section>
-        <div class="container-fluid fondoCeleste">
+        <div class="jumbotron">
            
               
-                    <br>
-                    <br>
+                    
                      
-                    <h1 class="text-lg-center text-white">Visitantes Registrados</h1>
+                    <h1 class="text-center bg-danger"><strong>Usuarios Registrados</strong></h1>
                     <div class="container-fluid">
                         
                         
                     <br><br>
-                    <table class="table table-warning">
-                        <tr class="text-lg-center table-inverse">
-                            <td>ID</td>
-                            <td>Nombre</td>
-                            <td>Cedula</td>
-                            <td>Edad</td>
-                            <td>Email</td>
-                            <td> Inscripcion.</td>
-                            <td># Vis.</td>
-                            <td>Status</td>
-                            <td colspan="2">Acciones</td>
+                    <table class="table table-bordered table-inverse">
+                        <tr class="text-center  letraBlanca text-uppercase">
+                            <td class="bg-primary">ID</td>
+                            <td class="bg-primary">Nombre</td>
+                            <td class="bg-primary">Cedula</td>
+                            <td class="bg-primary">Edad</td>
+                            <td class="bg-primary">Email</td>
+                            <td class="bg-primary"> Inscripcion.</td>
+                            <td class="bg-primary"># Vis.</td>
+                            <td class="bg-primary">Status</td>
+                            <td colspan="2" class="bg-primary">Acciones</td>
                         </tr>
                         <?php
                         if(isset($_POST['BusCed']) and $_POST['BusCed']!=''){
@@ -56,7 +55,7 @@
                         ?>
                     </table>
                      
-                    <br><br>
+                    
                     
                     </div>
                     <br>

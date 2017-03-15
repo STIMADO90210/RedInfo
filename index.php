@@ -1,8 +1,7 @@
 <?php
     include_once 'config.php';
-
-    include_once 'public/cabecera.php';
-   
+    include_once 'public/cabecera.php';   
+    
         if(isset($_SESSION['logo_inf'])){ 
             
             $img=$_SESSION['logo_inf'];
@@ -14,7 +13,7 @@
              $nomb='INFOCENTRO';
             
         }                                    
-                         
+       include_once 'public/mainmenu.php';                  
     ?>
 
                 <script>
@@ -23,10 +22,10 @@
                      
                 </script>
                 
-<body onload="cambiar(<?php echo  $img  ?>,<?php echo strtoupper($nomb)  ?>)">
+<body style="background-image:url(bootstrap/images/fondo-gris.jpg)">
         
            <?php 
-           include_once 'public/mainmenu.php';
+           
            if(isset($_GET['url'])){
             
                     $url=$_GET['url'];
@@ -34,15 +33,13 @@
                $url='Inicio';
            }
            ?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
-   <?php include_once 'vista/Contenedor'.$url.'.php'; ?>
+    
+    
+   <?php
+   
+   include_once 'vista/Contenedor'.$url.'.php'; 
+   ?>
     <br>
     <br>
             <?php include_once 'public/rodapie.php'; ?>

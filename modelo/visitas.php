@@ -44,7 +44,18 @@
               } //fin de funcion  leerblog
                                                                                   
               
-              
+               public function leervisita3($idinfo){
+                  
+                  
+                  $sql="SELECT * FROM reg_user WHERE id_info='$idinfo'  ORDER BY id_user DESC";
+                  $res=  mysqli_query(Conectar::con(), $sql);
+
+                  while($reg= mysqli_fetch_assoc($res))
+          				{
+          					$this->visita[]=$reg;
+          				}
+          					return $this->visita;
+              } //fin de funcion  leerblog
               
               public function leervisita2(){
                   $idinfo=$_SESSION['id_inf'];

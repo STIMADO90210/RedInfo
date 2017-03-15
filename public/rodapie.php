@@ -1,6 +1,8 @@
-<footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-5" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+<footer class="footer4" style="background-image:url(bootstrap/images/92385879.png)">
     
-    <div class="container">
-        <p class="text-xs-center">Derechos Reservados(c) 2016 Infocentro  y BlackSoft90210.</p>
+    <div class="container-fluid">
+        <br>
+        <h5 class="text-center letraBlanca">Derechos Reservados(c) 2016 Infocentro  y BlackSoft90210.</h5>
+        
     </div>
 </footer>
