@@ -52,9 +52,9 @@ $r=$reg->datusers($nro_user,$raza,$discap,$mision);
 ?>
 
 <section>
-        <div class="container-fluid fondoCeleste">
+        <div class="container fondoCeleste">
             <br>
-            <div class="container fondoGris">
+            <div class="container">
             <br>
             
             <h1 class="text-center letraBlanca">Registrar Visitantes Nuevos</h1>

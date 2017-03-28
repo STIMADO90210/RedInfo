@@ -42,7 +42,23 @@
           				}
           					return $this->visita;
               } //fin de funcion  leerblog
-                                                                                  
+                 
+              
+               public function leervisitaGen($idinfo){
+                  
+                  
+                  $sql="SELECT * FROM reg_user WHERE id_info='$idinfo'  ORDER BY id_user ASC";
+                  $res=  mysqli_query(Conectar::con(), $sql);
+
+                  while($reg= mysqli_fetch_assoc($res))
+          				{
+          					$this->visita[]=$reg;
+          				}
+          					return $this->visita;
+              } //fin de funcion  leerblog
+              
+              
+              
               
                public function leervisita3($idinfo){
                   

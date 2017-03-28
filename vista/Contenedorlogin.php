@@ -1,10 +1,13 @@
 <?php
-    if(isset($_POST['email'])and$_POST['email']!=''){
+            
+        if(isset($_POST['email'])and$_POST['email']!=''){
+            
         $id=$_POST['idinf'];
         $email=$_POST['email'];
         $pass=$_POST['pass'];
             $reg=new Users();
             $r=$reg->login($email, $pass, $id);
+            
            if(count($r)>0){
          $_SESSION['id_user']=$r[0]['id_user'];
          $_SESSION['nombre_user']=$r[0]['nombre_user'];
@@ -16,6 +19,7 @@
 
           $reg=new Infocentro();
           $r=$reg->leerInfo_id($id);
+          
           if(count($r)>0){
            $_SESSION['logo_inf'] = $r[0]['logo_inf'];
            $_SESSION['nombre_inf'] = $r[0]['nombre_inf'];
@@ -31,7 +35,7 @@
          }else{
            ?>
                  <script>
-                     alert('Usuario o Clave Son Incorrecto');
+                     alert('Usuario o Clave Son Incorrecto ' );
 
                  </script>
          <?php

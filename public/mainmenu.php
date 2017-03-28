@@ -11,8 +11,8 @@
                     <span class="icon-bar"></span>
                   </button>
                   <div class="">
-                      <a href="index.php" class="img-rounded pull-left"><img id="logo" src="bootstrap/images/<?php echo  $img  ?>" width="50" alt="Infocentro"></a>
-                        <a class="navbar-brand letraBlanca" id="nombre" href="index.php"> <?php echo strtoupper($nomb)  ?></a>
+                      <a href="index.php" class="img-rounded pull-left"><img id="logo" src="bootstrap/images/<?php echo  $img ?>" width="50" alt="Infocentro"></a>
+                        <a class="navbar-brand letraBlanca" id="nombre" href="index.php"> <?php echo  strtoupper($nomb)  ?></a>
                     </div>
             </div>   
             
@@ -29,11 +29,19 @@
                             <li class="dropdown">
                             <a href="" class="dropdown-toggle" data-toggle="dropdown">VISITAS<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                            <li><a href="?url=NuevaVisitas">Registrar Nuevo Visitante</a></li>
+                                
+                            <?php if($_SESSION['nivel_user']>0 ){ ?>
+                                <li><a href="?url=NuevaVisitas">Registrar Nuevo Visitante</a></li>
+                            
                             <li><a href="?url=cedvisita">Registrar Visita</a></li>
+                            <?php } ?>
                             <li class="divider"></li>
+                            <?php if($_SESSION['nivel_user']>0 ){ ?>
                             <li><a href="?url=listarvisita">Reporte General</a></li>
-                              
+                            <li><a href="?url=reportefecha">Reporte Por Fecha</a></li>
+                            <?php }else { ?>
+                            <li><a href="?url=listarvisita2">Reporte General Admin</a></li>
+                             <?php } ?>
                             </ul>
                             </li>
                             
@@ -59,7 +67,7 @@
            
 <li class="dropdown">
     <a href="" class="dropdown-toggle " data-toggle="dropdown">
-       <img class="img-circle pull-right" src="bootstrap/images/<?php echo  $_SESSION['img_user'] ?>" width="50" >
+       <img class="img-circle pull-right" src="bootstrap/images/<?php echo  $_SESSION['img_user'] ?>" width="30" >
     </a>
      <br>
       <br>
@@ -84,7 +92,7 @@
                         
                     </div>     
             
-             <?php if(isset($_SESSION['email_user'])and isset($_SESSION['nivel_user'])==1){ ?>                                                                  
+             <?php if(isset($_SESSION['email_user'])and $_SESSION['nivel_user']>0){ ?>                                                                  
                       <form class="navbar-form navbar-left" role="search" name="cedula" method="post" action="?url=listarvisita" >
                       
                                 <div class="form-group">

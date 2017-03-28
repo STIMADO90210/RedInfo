@@ -6,7 +6,9 @@
                      
                     <h1 class="text-center bg-danger"><strong>Usuarios Registrados</strong></h1>
                     <div class="container-fluid">
-                        
+                      <br>
+                      
+                      <a href="reportes/Contenedorimprep.php" class="btn btn-primary pull-right">IMPRIMIR REPORTE</a>  
                         
                     <br><br>
                     <table class="table table-bordered table-inverse">

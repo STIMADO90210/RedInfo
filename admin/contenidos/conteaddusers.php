@@ -153,7 +153,7 @@
                                                <?php
                                                  }else{
                                                  ?>
-                                      <option class="text-danger" value="<?php echo $r[$j]['id_inf'] ?>"><?php echo $r[$j]['nombre_inf'] ?></option>
+                                      <option class="text-danger text-uppercase" value="<?php echo $r[$j]['id_inf'] ?>"><?php echo $r[$j]['nombre_inf'] ?></option>
                                                    <?php
                                                  }
                                                  }

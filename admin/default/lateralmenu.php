@@ -19,20 +19,22 @@
                 <li>
                     <a href="?url2=blogs">BLOGS</a>
                 </li>
+                <li>
+                    <a href="?url2=motivo">MOTIVO</a>
+                </li>
                  <li>
                     <a href="?url2=discap">DISCAPACIDAD</a>
+                </li>
+                 <li>
+                    <a href="?url2=raza">ETNIA</a>
                 </li>
                 <?php if($_SESSION['nivel_user']!=0){ ?>
                 <li>
                     <a href="?url2=visita">VISITAS</a>
                 </li>
                 <?php } ?>
-                <li>
-                    <a href="?url2=home">REPORTES</a>
-                </li>
-                <li>
-                    <a href="#">SLIDER</a>
-                </li>
+               
+               
                  <li>
                     <a href="../?url=Inicio">SALIR AL HOME</a>
                 </li>

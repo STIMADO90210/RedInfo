@@ -35,6 +35,30 @@ class MotVisita{
 					return $this->motivo;
     } //fin de funcion  leerblog
     
+     public function leermotivoid($id){
+        
+        $sql="SELECT * FROM motvisita WHERE id_mot='$id'";
+        $res=  mysqli_query(Conectar::con(), $sql);
+       
+        while($reg= mysqli_fetch_assoc($res))
+				{
+            
+					$this->motivo[]=$reg;
+				}
+					return $this->motivo;
+    } //fin de funcion  leerblog
+    
+     public function leermotivo2($ini,$most){
+        
+        $sql="SELECT * FROM motvisita LIMIT $ini,$most";
+        $res=  mysqli_query(Conectar::con(), $sql);
+
+        while($reg= mysqli_fetch_assoc($res))
+				{
+					$this->motivo[]=$reg;
+				}
+					return $this->motivo;
+    } //fin de funcion  leerblog
     
     
     public function totalvisitas($id_inf){
@@ -72,6 +96,24 @@ class MotVisita{
           
      }
      
-     
+      public function addmotivo($motivo){
+        
+           $sql="INSERT INTO motvisita (MotVisita) VALUES('$motivo')";
+           $res=  mysqli_query(Conectar::con(), $sql);           
+    }
+    // 
+     public function editmotivoid($motivo,$id){
+
+    $sql="UPDATE motvisita SET MotVisita='$motivo'  WHERE id_mot='$id'";
+    $res=  mysqli_query(Conectar::con(), $sql); 
+   
+    } //fin del methodo editinfo_id
+    
+      public function deletemotivoid($id){
+          
+    $sql="DELETE  FROM motvisita  WHERE id_mot='$id'";
+    $res=  mysqli_query(Conectar::con(), $sql); 
+    
+    } //fin del methodo editinfo_id
      
 }

@@ -15,7 +15,7 @@
 
                 <div class="">
                     <table class="table">
-                        <tr class="text-center ">
+                        <tr class="text-center text-uppercase">
                             <td>Id</td>
                             <td>Codigo</td>
                             <td>Infocentro</td>

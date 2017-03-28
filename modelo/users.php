@@ -62,7 +62,7 @@
 
 
                   public function addusers($cedula, $nombre, $apellido,$email,$pass,$img, $id_inf, $cargo){
-                    $sql="INSERT INTO usuarios (cedula_user,nombre_user,apellido_user,email_user,clave_user,img_user,id_inf, nivel_user) VALUES('$cedula', '$nombre', '$apellido','$img','$email','$pass', '$id_inf', '$cargo')";
+                    $sql="INSERT INTO usuarios (cedula_user,nombre_user,apellido_user,email_user,clave_user,img_user,id_inf, nivel_user) VALUES('$cedula', '$nombre', '$apellido','$email','$pass','$img', '$id_inf', '$cargo')";
                     $res=  mysqli_query(Conectar::con(), $sql);
                     
                   } // fin de funcion addblog
@@ -86,13 +86,17 @@
             }
 
 
-             public function login($email,$pass,$idinf){
-                $sql="SELECT * FROM usuarios WHERE email_user='$email' AND clave_user='$pass' AND id_inf='$idinf'";
+             public function login($email,$pass,$idinf){                 
+                 
+                $sql="SELECT * FROM usuarios WHERE (email_user='$email' AND clave_user='$pass') AND id_inf='$idinf'";
+                
                 $res=  mysqli_query(Conectar::con(), $sql);
+               
                 if($res){
                     while($reg= mysqli_fetch_assoc($res))
                     {
                             $this->Users[]=$reg;
+                           
                     }
 
               }
